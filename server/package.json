@@ -1,0 +1,14 @@
+{
+  "name": "smartsummary-backend",
+  "version": "1.0.0",
+  "description": "SmartSummary backend — proxies Gemini API and handles Stripe subscriptions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "stripe": "^14.0.0"
+  }
+}
