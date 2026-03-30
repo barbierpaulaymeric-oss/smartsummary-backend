@@ -1,6 +1,7 @@
 // SmartSummary — Backend server
 // Proxies Gemini API calls and handles Stripe subscription management.
 
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const Stripe = require('stripe');
@@ -168,7 +169,7 @@ async function handleWebhook(req, res) {
 
 // ── Gemini API ──────────────────────────────────────────────────────
 
-const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
 
 async function callGemini(text) {
   const prompt = `You are a summarization assistant. Summarize the following web page content into 5-8 clear, concise bullet points. Each bullet point should be on its own line, starting with "- ". Focus on the key information and main ideas. Be factual and objective.\n\nContent:\n${text}`;
