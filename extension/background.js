@@ -1,7 +1,7 @@
 // SmartSummary — Background service worker
 // Manages API calls, daily usage counter, and Stripe checkout.
 
-const BACKEND_URL = 'http://localhost:3000';
+const BACKEND_URL = 'https://smartsummary-o9yi.onrender.com';
 const FREE_DAILY_LIMIT = 5;
 
 // ── Helpers ─────────────────────────────────────────────────────────
