@@ -214,7 +214,7 @@ async function callGemini(text) {
 
 // ── Start server ────────────────────────────────────────────────────
 
-app.listen(PORT, () => {
-  console.log(`SmartSummary backend running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`SmartSummary backend running on http://0.0.0.0:${PORT}`);
   console.log(`Stripe: ${stripe ? 'configured' : 'NOT configured (set STRIPE_SECRET_KEY)'}`);
 });
